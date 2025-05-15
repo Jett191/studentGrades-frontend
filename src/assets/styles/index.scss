@@ -1,0 +1,286 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: #eef1f6;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 15px;
+  position: relative;
+}
+
+//分页组件始终在页面右下角
+.pagination-containers {
+  position: fixed;
+  right: 15px; /* 调整右边距 */
+  bottom: 25px; /* 调整下边距 */
+  z-index: 1000; /* 确保分页组件在其他元素之上 */
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+/*  dialog*/
+.el-dialog__header {
+  padding: 15px 10px 15px;
+}
+.el-dialog__headerbtn{
+  top: 15px;
+  font-size: 25px;
+}
+
+/*dialog header*/
+.el-dialog__header{
+  background: #F0FFFF;
+}
+//.avue-crud__dialog__header {
+//  display: -webkit-box;
+//  display: -ms-flexbox;
+//  display: flex;
+//  -webkit-box-align: center;
+//  -ms-flex-align: center;
+//  //align-items: center;
+//  -webkit-box-pack: justify;
+//  -ms-flex-pack: justify;
+//  justify-content: space-between;
+//}
+//.el-dialog__title {
+//  color: rgba(0,0,0,.85);
+//  font-weight: 500;
+//  word-wrap: break-word;
+//  font-size: 15px;
+//}
+//.avue-crud__dialog__menu {
+//  padding-right: 25px;
+//  float: left;
+//}
+//.avue-crud__dialog__menu i {
+//  color: #909399;
+//  font-size: 15px;
+//}
+//.el-icon-full-screen{
+//  cursor: pointer;
+//}
+//.el-icon-full-screen:before {
+//  content: "\e719";
+//}
+//
+//.el-date-editor--monthrange.el-input, .el-date-editor--monthrange.el-input__inner{
+//  width: 100%;
+//}
+//
+.el-input__inner {
+  width: 100%;
+}
+//.el-dialog {
+//  border-radius: 10px;
+//}
+//.el-dialog__header {
+//  border-radius: 10px 10px 0 0; /* 上面两个值是左上和右上的圆角半径，下面两个值是右下和左下的圆角半径 */
+//}
+//.el-form-item{
+//  font-weight: 600;
+//}
+
+//.el-icon-close:before {
+//  font-size: 20px;
+//}
+
+//输入框背景颜色
+//.el-input--small .el-input__inner {
+//  background-color: aliceblue;
+//}
+//
+//.vue-treeselect div, .vue-treeselect span {
+//  background-color: aliceblue;
+//}
+//
+//.el-range-editor.el-input__inner {
+//  background-color: aliceblue;
+//}
+//
+//.el-range-editor--small .el-range-input {
+//  background-color: aliceblue;
+//}
+//
+//.el-textarea__inner {
+//  background-color: aliceblue;
+//}
+//
+//.ql-toolbar.ql-snow + .ql-container.ql-snow {
+//  background-color: aliceblue;
+//}
+//
+//.ql-toolbar.ql-snow {
+//  background-color: aliceblue;
+//}

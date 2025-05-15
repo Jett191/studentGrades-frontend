@@ -1,0 +1,123 @@
+{
+  "name": "ruoyi",
+  "version": "3.8.7",
+  "description": "学生成绩信息管理系统",
+  "author": "若依",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build:prod": "vue-cli-service build",
+    "build:stage": "vue-cli-service build --mode staging",
+    "preview": "node build/index.js --preview",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "boilerplate",
+    "admin-template",
+    "management-system"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/y_project/RuoYi-Vue.git"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@jiaminghi/data-view": "^2.10.0",
+    "@riophae/vue-treeselect": "0.4.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^1.0.2",
+    "ant-design-vue": "^1.7.8",
+    "axios": "0.28.1",
+    "babel-plugin-component": "^1.1.1",
+    "bpmn-js": "^8.10.0",
+    "bpmn-js-properties-panel": "^0.44.0",
+    "bpmn-js-token-simulation": "^0.21.1",
+    "camunda-bpmn-moddle": "^7.0.1",
+    "clipboard": "2.0.8",
+    "core-js": "3.37.1",
+    "diagram-js": "^14.4.0",
+    "echarts": "^5.4.0",
+    "element-tree-line": "^0.2.1",
+    "element-ui": "2.15.14",
+    "file-saver": "2.0.5",
+    "fuse.js": "6.4.3",
+    "highlight.js": "^9.18.5",
+    "inherits": "^2.0.4",
+    "jeeplus-bpmn": "^6.0.10",
+    "jquery": "^3.7.1",
+    "js-beautify": "1.13.0",
+    "js-cookie": "3.0.1",
+    "jsencrypt": "3.0.0-rc.1",
+    "jszip": "^3.10.1",
+    "nprogress": "0.2.0",
+    "qrcodejs2": "^0.0.2",
+    "quill": "1.3.7",
+    "raw-loader": "^4.0.2",
+    "reset": "^0.1.0",
+    "reset.css": "^2.0.2",
+    "save": "^2.9.0",
+    "screenfull": "5.0.2",
+    "sortablejs": "1.10.2",
+    "vue": "2.6.14",
+    "vue-bpmn": "^0.3.0",
+    "vue-count-to": "1.0.13",
+    "vue-cropper": "0.5.5",
+    "vue-i18n": "^8.28.2",
+    "vue-meta": "2.4.0",
+    "vue-qr": "^4.0.9",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "3.4.9",
+    "vue-seamless-scroll": "^1.1.23",
+    "vue3-dxui": "^1.1.9",
+    "vuedraggable": "2.24.3",
+    "vuex": "3.6.0",
+    "vxe-table": "~3.8.25",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.4.6",
+    "@vue/cli-plugin-eslint": "4.4.6",
+    "@vue/cli-service": "4.4.6",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-dynamic-import-node": "2.3.3",
+    "browserslist": "^4.24.2",
+    "caniuse-lite": "^1.0.30001684",
+    "chalk": "4.1.0",
+    "compression-webpack-plugin": "6.1.2",
+    "connect": "3.6.6",
+    "eslint": "7.15.0",
+    "eslint-plugin-vue": "7.2.0",
+    "lint-staged": "10.5.3",
+    "runjs": "4.4.2",
+    "sass": "1.32.13",
+    "sass-loader": "10.1.1",
+    "script-ext-html-webpack-plugin": "2.1.5",
+    "svg-sprite-loader": "5.1.1",
+    "vue-template-compiler": "2.6.14"
+  },
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
